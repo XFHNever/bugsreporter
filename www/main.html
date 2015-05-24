@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bugs Reporter</title>
+    <!-- Bootstrap -->
+    <link href="css/common/bootstrap.min.css" rel="stylesheet">
+
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="css/common/bootstrap-ie7fix.min.css">
+    <![endif]-->
+    <link href="css/common/common.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Bugs Reporter</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control search" placeholder="Search">
+                    </div>
+                    <button id="search" type="submit" class="btn btn-default">Search</button>
+                    <button id="add" type="submit" class="btn btn-default"> &nbsp;&nbsp; Add &nbsp;&nbsp;  </button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">BugType</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="bugs-top right">
+            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+            Bug List <input type="hidden" id="is-topstory2">
+        </div>
+        <hr class="right">
+        <div class="bugs right">
+            <div class="bug">
+                <div class="bug-title">
+                    <a>Bug Title</a>
+                </div>
+                <div class="bug-content">
+                    <span>askdjhgkfs;kl skljkdfghl ;sdjhsds ;alkjdfhjgl;</span>
+                </div>
+                <div class="bug-bottom clearfix">
+                    <div class="bug-type pull-left">
+                        <span>NullPointException</span>
+                    </div>
+                    <div class="bug-time pull-right">
+                        <span>2015-05-24</span>
+                    </div>
+                </div>
+            </div>
+            <hr class="right">
+        </div>
+    </div>
+
+    <div class="modal fade" id="createModel" tabindex="-1" role="dialog" aria-labelledby="createModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">Create New Bug</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input class="form-control" name="name" placeholder="input bug's title">
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea class="form-control" rows="3" name="desc" placeholder="input bug's description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Code</label>
+                        <textarea class="form-control" rows="3" name="code" placeholder="input bug's code"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Type</label>
+                        <input class="form-control" name="type" placeholder="input bug's type">
+                    </div>
+                    <div class="form-group">
+                        <label>Language</label>
+                        <input class="form-control" name="language" placeholder="input bug's language">
+                    </div>
+                    <div class="form-group">
+                        <label>Solve</label>
+                        <textarea class="form-control" rows="3" name="solve" placeholder="input bug's solution"></textarea>
+                    </div>
+                    <div class="alert hidden alert-success" role="alert">Create  a new mockItems successfully!</div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-right disabled">Save</button>
+                    <button type="button" class="btn btn-left" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you views the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="js/common/html5shiv.js"></script>
+    <script src="js/common/respond.min.js"></script>
+    <![endif]-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/common/jquery-1.11.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/common/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
