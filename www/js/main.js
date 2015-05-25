@@ -24,7 +24,7 @@
 
             getBugs: function getBugs() {
                 $.ajax({
-                    url: '/bugs',
+                    url: 'http://106.187.99.225:4000/bugs',
                     type: 'get',
                     ataType : "json",
                     success: function(bugs) {
@@ -44,13 +44,12 @@
                         }
                     },
                     error: function() {
-                        alert('error');
                     }
                 });
             },
             searchBugs: function searchBugs(key) {
                 $.ajax({
-                    url: 'http://localhost:3000/bugs?key=' + key,
+                    url: 'http://106.187.99.225:4000/bugs?key=' + key,
                     type: 'get',
                     dataType : "json",
                     success: function(bugs) {
@@ -72,7 +71,7 @@
             },
             createBug: function createBug(name, desc, code, type,language,solve) {
                 $.ajax({
-                    url: 'http://localhost:3000/bugs',
+                    url: 'http://106.187.99.225:4000/bugs',
                     type: 'post',
                     dataType : "json",
                     data: {name: name, desc: desc, code: code, type: type, language: language, solve: solve},
@@ -80,7 +79,7 @@
                         if(data != null) {
                             var page = $('bugs').html;
 
-
+                            alert('success');
                         }
                     }
                 });
