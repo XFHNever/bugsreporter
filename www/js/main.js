@@ -1,12 +1,12 @@
 (function(window, $, undefined){
 		var bugService = {
-			attachEvents: function(){
+			attachEvents: function attachEvents(){
                 $('#add').on("click", function(){
                     var $createModel = $('#createModel');
                     $createModel.modal({
                         backdrop: 'static'
                     });
-                })
+                });
 
                 $('#createModel')
                     .on('click', '.btn-right', function() {    //create a new resource
@@ -19,7 +19,7 @@
                         var solve = $createModel.find('textarea[name=solve]').val();
 
                         bugService.createBug(name, desc, code, type, language, solve);
-                    })
+                    });
 			},
 
             getBugs: function getBugs() {
@@ -28,7 +28,6 @@
                     type: 'get',
                     ataType : "json",
                     success: function(bugs) {
-                        alert('tt');
                          if(bugs != null) {
                             var length = bugs.length;
                             var innerHtml = '';
@@ -42,8 +41,6 @@
 
                             $('.bugs').html(innerHtml);
                         }
-                    },
-                    error: function() {
                     }
                 });
             },
@@ -59,7 +56,7 @@
 
                             for(var i=0; i<length; i++) {
                                 innerHtml += '<div class="bug"><div class="bug-title"><a bug_id="' + bugs[i]._id + '>' +
-                                bugs.name + '</a></div><div class="bug-content"><span>' + bugs[i].desc + '</span></div>' +
+                                bugs[i].name + '</a></div><div class="bug-content"><span>' + bugs[i].desc + '</span></div>' +
                                 '<div class="bug-bottom clearfix"><div class="bug-type pull-left"><span>' + bugs[i].type +
                                 '</span></div><div class="bug-time pull-right"><span>' + bugs[i].time + '</span></div></div></div><hr class="right">';
                             }
@@ -75,11 +72,15 @@
                     type: 'post',
                     dataType : "json",
                     data: {name: name, desc: desc, code: code, type: type, language: language, solve: solve},
-                    success: function(data) {
-                        if(data != null) {
-                            var page = $('bugs').html;
-
-                            alert('success');
+                    success: function(bug) {
+                        if(bug != null) {
+                            var $bugs = $('bugs');
+                            var innerHtml = $bugs.html;
+                            innerHtml = '<div class="bug"><div class="bug-title"><a bug_id="' + bug._id + '>' +
+                            bug.name + '</a></div><div class="bug-content"><span>' + bug.desc + '</span></div>' +
+                            '<div class="bug-bottom clearfix"><div class="bug-type pull-left"><span>' + bug.type +
+                            '</span></div><div class="bug-time pull-right"><span>' + bug.time + '</span></div></div></div><hr class="right">' + innerHtml;
+                            $bugs.html(innerHtml);
                         }
                     }
                 });
