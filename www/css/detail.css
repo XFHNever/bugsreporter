@@ -1,0 +1,37 @@
+.bug-code{
+    color: #c6c6c6;
+    margin-bottom: 40px;
+}
+hr{
+    margin-bottom: 5px;
+}
+.bug-language{
+    color: #3e6d8e;
+    font-size: 12px;
+    margin: 2px 10px 2px 10px;
+    background: #e4b9b9;
+    border: 1px solid #e4edf4;
+    -webkit-transition: color 0.15s ease, background 0.15s ease, border 0.15s ease;
+}
+.bug-solution{
+    margin-top: 20px;
+    padding-bottom: 5px;
+    color: #444;
+}
+.bug-operation{
+    margin-top: 20px;
+}
+.bug-modify{
+    padding: 1px 20px;
+    border-radius: 16px;
+    float:left;
+    margin-left:190px;
+    border: 1px solid #282b38;
+}
+.bug-delete{
+    padding: 1px 15px;
+    border-radius: 16px;
+    float:right;
+    margin-right:190px;
+    border: 1px solid #282b38;
+}

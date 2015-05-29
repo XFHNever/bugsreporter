@@ -13,23 +13,16 @@
     <link rel="stylesheet" href="css/common/bootstrap-ie7fix.min.css">
     <![endif]-->
     <link href="css/common/common.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <link href="css/detail.css" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Bugs Reporter</a>
+                <a class="navbar-brand" href="main.html">Bugs Reporter</a>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control search" placeholder="Search">
-                    </div>
-                    <button id="search" type="button" class="btn btn-default">Search</button>
-                    <button id="add" type="button" class="btn btn-default"> &nbsp;&nbsp; Add &nbsp;&nbsp;  </button>
-                </form>
                 <ul class="nav navbar-nav navbar-right">
                     <!--<li><a href="#">BugType</a></li>-->
                     <li><a href="about.html">About</a></li>
@@ -38,40 +31,48 @@
         </div>
     </nav>
     <div class="container">
+        <div class="bug-id hidden"></div>
         <div class="bugs-top right">
-            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-            Bug List <input type="hidden" id="is-topstory2">
+            <div class="bug-title">
+               <h2></h2>
+            </div>
         </div>
         <hr class="right">
-        <div class="bugs right">
-            <div class="bug">
-                <div class="bug-title">
-                    <a>Bug Title</a>
+        <div class="right">
+            <p class="bug-content"></p>
+            <span class="bug-code"></span>
+            <div class="bug-bottom clearfix">
+                <div class="bug-type pull-left">
+                    <span></span>
                 </div>
-                <div class="bug-content">
-                    <span>askdjhgkfs;kl skljkdfghl ;sdjhsds ;alkjdfhjgl;</span>
+                <div class="bug-time pull-right">
+                    <span></span>
                 </div>
-                <div class="bug-bottom clearfix">
-                    <div class="bug-type pull-left">
-                        <span>NullPointException</span>
-                    </div>
-                    <div class="bug-time pull-right">
-                        <span>2015-05-24</span>
-                    </div>
+                <div class="bug-language pull-right">
+                    <span></span>
                 </div>
             </div>
-            <hr class="right">
+        </div>
+        <hr class="right">
+        <h4>Solution</h4>
+        <hr class="right">
+        <div  class="bug-solution">
+            <span></span>
+        </div>
+        <hr class="right">
+        <div class="bug-operation right clearfix">
+            <button type="button" class="btn btn-default bug-delete">Delete</button>
+            <button type="button" class="btn btn-default bug-modify">Modify</button>
         </div>
     </div>
 
-
-
-    <div class="modal fade" id="createModel" tabindex="-1" role="dialog" aria-labelledby="createModalLabel" aria-hidden="true">
+    <!-- edit a existing resource -->
+    <div class="modal fade" id="updateModel" tabindex="-1" role="dialog" aria-labelledby="updateModelLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h4 class="modal-title">Create New Bug</h4>
+                    <h4 class="modal-title">Update Bug</h4>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
@@ -108,6 +109,24 @@
         </div>
     </div>
 
+    <div class="modal fade" id="deleteModel" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">Confirmation</h4>
+                </div>
+                <div class="modal-body">
+                    <h4>Confirm to delete?</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-right">Ok</button>
+                    <button type="button" class="btn btn-left" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you views the page via file:// -->
     <!--[if lt IE 9]>
@@ -118,6 +137,6 @@
     <script src="js/common/jquery-1.11.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/common/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/detail.js"></script>
 </body>
 </html>

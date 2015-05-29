@@ -1,11 +1,6 @@
 .search {
     min-width: 350px;
 }
-
-.right{
-    width: 60%;
-}
-
 .bugs-top{
     color: #666;
 }
@@ -13,29 +8,5 @@
 
 }
 .bug{
-
-}
-.bug-type{
-    color: #3e6d8e;
-    font-size: 12px;
-    margin: 2px 2px 2px 0;
-    background: #e4edf4;
-    border: 1px solid #e4edf4;
-    -webkit-transition: color 0.15s ease, background 0.15s ease, border 0.15s ease;
-}
-.bug-title{
-    font-size: 15px;
-    line-height: 1.4;
-    margin-bottom: .5em;
-}
-.bug-content{
-    padding-bottom: 5px;
-    margin: 0;
-    color: #444;
-}
-.bug-bottom{
-    color: #999;
-}
-.bug-time{
 
 }
