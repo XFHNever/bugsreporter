@@ -1,7 +1,7 @@
 (function(window, $, undefined){
         var global = {
-            host: 'http://localhost:4000/bugs'
-            //host: 'http://106.187.99.225:4000/bugs'
+            //host: 'http://localhost:4000/bugs'
+            host: 'http://106.187.99.225:4000/bugs'
         };
 		var bugService = {
 			attachEvents: function attachEvents(){
