@@ -1,4 +1,8 @@
 (function(window, $, undefined){
+        var global = {
+            host: 'http://localhost:4000/bugs'
+            //host: 'http://106.187.99.225:4000/bugs'
+        };
 		var bugService = {
 			attachEvents: function attachEvents(){
                 $('#add').on("click", function(){
@@ -41,7 +45,7 @@
 
             getBugs: function getBugs() {
                 $.ajax({
-                    url: 'http://106.187.99.225:4000/bugs',
+                    url: global.host,
                     type: 'get',
                     ataType : "json",
                     success: function(bugs) {
@@ -63,7 +67,7 @@
             },
             searchBugs: function searchBugs(key) {
                 $.ajax({
-                    url: 'http://106.187.99.225:4000/bugs?key=' + key,
+                    url: global.host + '?key=' + key,
                     type: 'get',
                     dataType : "json",
                     success: function(bugs) {
@@ -87,7 +91,7 @@
             },
             createBug: function createBug(name, desc, code, type,language,solve) {
                 $.ajax({
-                    url: 'http://106.187.99.225:4000/bugs',
+                    url: global.host,
                     type: 'post',
                     dataType : "json",
                     data: {name: name, desc: desc, code: code, type: type, language: language, solve: solve},

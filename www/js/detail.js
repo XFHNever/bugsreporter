@@ -1,6 +1,7 @@
 (function(window, $, undefined){
     var global = {
-        host: 'http://106.187.99.225:4000/bugs/'
+        host: 'http://localhost:4000/bugs/'
+        //host: 'http://106.187.99.225:4000/bugs/'
     };
     //parse url, and get query content with given name.
     function getQueryStringV(vhref, name) {
